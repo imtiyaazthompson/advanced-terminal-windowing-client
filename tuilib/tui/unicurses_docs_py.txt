@@ -1,0 +1,757 @@
+Python Library Documentation: module unicurses
+
+NAME
+    unicurses
+
+MODULE REFERENCE
+    https://docs.python.org/3.5/library/unicurses.html
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    # UniCurses -- A unified multiplatform Curses provider library for Python 2.x/3.x
+    # Copyright (C) 2010 by Michael Kamensky.
+    #
+    # This program is free software: you can redistribute it and/or modify
+    # it under the terms of the GNU General Public License as published by
+    # the Free Software Foundation, either version 3 of the License, or
+    # (at your option) any later version.
+    #
+    # This program is distributed in the hope that it will be useful,
+    # but WITHOUT ANY WARRANTY; without even the implied warranty of
+    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    # GNU General Public License for more details.
+    #
+    # You should have received a copy of the GNU General Public License
+    # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+FUNCTIONS
+    ALTCHAR(ch)
+        # Alternate character set
+    
+    CCHAR(ch)
+        # Get a C character
+    
+    COLOR_PAIR(n)
+    
+    CSTR(s)
+        # Return a bytes-encoded C style string from anything that's convertable with str.
+        # It is used to pass strings to PDCurses which expects a C-formatted string.
+    
+    KEY_F(n)
+    
+    PD_COLOR_PAIR(n)
+        # Choose a color pair
+    
+    PD_GET_CURSCR()
+        # Get the PDC curscr (NOT PORTABLE!)
+    
+    PD_PAIR_NUMBER(n)
+        # Pair number from curses.h
+    
+    addch(ch, attr=0)
+    
+    addnstr(cstr, n, attr='NO_USE')
+    
+    addstr(cstr, attr='NO_USE')
+    
+    attroff(attr)
+    
+    attron(attr)
+    
+    attrset(attr)
+    
+    baudrate()
+    
+    beep()
+    
+    bkgd(ch, attr=0)
+    
+    bkgdset(ch, attr=0)
+    
+    border(ls=4194424, rs=4194424, ts=4194417, bs=4194417, tl=4194412, tr=4194411, bl=4194413, br=4194410)
+    
+    bottom_panel(pan_id)
+    
+    box(scr_id, verch=4194424, horch=4194417)
+    
+    can_change_color()
+    
+    cbreak()
+    
+    chgat(num, attr, color, opts=None)
+    
+    clear()
+    
+    clearok(scr_id, yes)
+    
+    clrtobot()
+    
+    clrtoeol()
+    
+    color_content(color_number)
+    
+    color_pair(color_number)
+    
+    copywin(src_id, dest_id, sminrow, smincol, dminrow, dmincol, dmaxrow, dmaxcol, overlay)
+    
+    curs_set(visibility)
+    
+    cursyncup(scr_id)
+    
+    def_prog_mode()
+    
+    def_shell_mode()
+    
+    del_panel(pan_id)
+    
+    delay_output(ms)
+    
+    delch()
+    
+    deleteln()
+    
+    delwin(scr_id)
+    
+    derwin(srcwin, nlines, ncols, begin_y, begin_x)
+    
+    doupdate()
+    
+    echo()
+    
+    echochar(ch, attr=0)
+    
+    enclose(y, x)
+    
+    endwin()
+    
+    erase()
+    
+    erasechar()
+    
+    filter()
+    
+    flash()
+    
+    flushinp()
+    
+    getbegyx(scr_id)
+    
+    getch()
+    
+    getkey(y=-1, x=-1)
+    
+    getmaxyx(scr_id)
+    
+    getmouse()
+    
+    getparyx(scr_id)
+    
+    getstr()
+    
+    getsyx()
+    
+    getwin(file)
+    
+    getyx(scr_id)
+    
+    halfdelay(tenths)
+    
+    has_colors()
+    
+    has_ic()
+    
+    has_il()
+    
+    has_key(ch)
+    
+    hide_panel(pan_id)
+    
+    hline(ch, n)
+    
+    idcok(scr_id, flag)
+    
+    idlok(scr_id, yes)
+    
+    immedok(scr_id, flag)
+    
+    inch()
+    
+    init_color(color, r, g, b)
+    
+    init_pair(pair_number, fg, bg)
+    
+    initscr()
+    
+    insch(ch, attr=0)
+    
+    insdelln(nlines)
+    
+    insertln()
+    
+    insnstr(str, n, attr='NO_USE')
+    
+    insstr(cstr, attr='NO_USE')
+    
+    instr(n=-1)
+    
+    is_linetouched(scr_id, line)
+    
+    is_wintouched(scr_id)
+    
+    isendwin()
+    
+    keyname(k)
+    
+    keypad(scr_id, yes)
+    
+    killchar()
+    
+    leaveok(scr_id, yes)
+    
+    longname()
+    
+    meta(scr_id, yes)
+    
+    mouseinterval(interval)
+    
+    mousemask(mmask)
+    
+    move(new_y, new_x)
+    
+    move_panel(pan_id, y, x)
+    
+    mvaddch(y, x, ch, attr=0)
+    
+    mvaddnstr(y, x, cstr, n, attr='NO_USE')
+    
+    mvaddstr(y, x, cstr, attr='NO_USE')
+    
+    mvchgat(y, x, num, attr, color, opts=None)
+    
+    mvdelch(y, x)
+    
+    mvdeleteln(y, x)
+    
+    mvderwin(scr_id, pary, parx)
+    
+    mvgetch(y, x)
+    
+    mvgetstr(y, x)
+    
+    mvhline(y, x, ch, n)
+    
+    mvinch(y, x)
+    
+    mvinsch(y, x, ch, attr=0)
+    
+    mvinsnstr(y, x, str, n, attr='NO_USE')
+    
+    mvinsstr(y, x, cstr, attr='NO_USE')
+    
+    mvinstr(y, x, n=-1)
+    
+    mvvline(y, x, ch, n)
+    
+    mvwaddch(scr_id, y, x, ch, attr=0)
+    
+    mvwaddnstr(scr_id, y, x, cstr, n, attr='NO_USE')
+    
+    mvwaddstr(scr_id, y, x, cstr, attr='NO_USE')
+    
+    mvwchgat(scr_id, y, x, num, attr, color, opts=None)
+    
+    mvwdelch(scr_id, y, x)
+    
+    mvwdeleteln(scr_id, y, x)
+    
+    mvwgetch(scr_id, y, x)
+    
+    mvwgetstr(scr_id, y, x)
+    
+    mvwhline(scr_id, y, x, ch, n)
+    
+    mvwin(scr_id, y, x)
+    
+    mvwinch(scr_id, y, x)
+    
+    mvwinsch(scr_id, y, x, ch, attr=0)
+    
+    mvwinsnstr(scr_id, y, x, strn, n, attr='NO_USE')
+    
+    mvwinsstr(scr_id, y, x, strn, attr='NO_USE')
+    
+    mvwinstr(scr_id, y, x, n=-1)
+    
+    mvwvline(scr_id, y, x, ch, n)
+    
+    napms(ms)
+    
+    new_panel(scr_id)
+    
+    newpad(nlines, ncols)
+    
+    newwin(nlines, ncols, begin_y, begin_x)
+    
+    nl()
+    
+    nocbreak()
+    
+    nodelay(scr_id, yes)
+    
+    noecho()
+    
+    nonl()
+    
+    noqiflush()
+    
+    noraw()
+    
+    notimeout(scr_id, yes)
+    
+    noutrefresh(scr_id)
+    
+    overlay(src_id, dest_id)
+    
+    overwrite(src_id, dest_id)
+    
+    pair_content(pair_number)
+    
+    pair_number(attr)
+    
+    panel_above(pan_id)
+    
+    panel_below(pan_id)
+    
+    panel_hidden(pan_id)
+    
+    panel_userptr(pan_id)
+    
+    panel_window(pan_id)
+    
+    prefresh(scr_id, pminrow, pmincol, sminrow, smincol, smaxrow, smaxcol)
+    
+    putp(cstring)
+    
+    putwin(scr_id, file)
+    
+    qiflush()
+    
+    raw()
+    
+    redrawln(beg, num)
+    
+    redrawwin(scr_id)
+    
+    refresh()
+    
+    replace_panel(pan_id, win)
+    
+    reset_prog_mode()
+    
+    reset_shell_mode()
+    
+    scroll(lines=1)
+    
+    scrollok(scr_id, flag)
+    
+    set_panel_userptr(pan_id, obj)
+    
+    setscrreg(top, bottom)
+    
+    setsyx(y, x)
+    
+    setupterm(termstr, fd)
+    
+    show_panel(pan_id)
+    
+    standend()
+    
+    standout()
+    
+    start_color()
+    
+    subpad(scrwin, nlines, ncols, begin_y, begin_x)
+    
+    subwin(srcwin, nlines, ncols, begin_y, begin_x)
+    
+    syncdown()
+    
+    syncok(scr_id, flag)
+    
+    syncup()
+    
+    termattrs()
+    
+    termname()
+    
+    tigetflag(capname)
+    
+    tigetnum(capname)
+    
+    tigetstr(capname)
+    
+    timeout(delay)
+    
+    top_panel(pan_id)
+    
+    touchline(y, x, changed=1)
+    
+    touchln(y, x, changed=1)
+    
+    touchwin(scr_id)
+    
+    tparm(str, p1=0, p2=0, p3=0, p4=0, p5=0, p6=0, p7=0, p8=0, p9=0)
+    
+    typeahead(fd)
+    
+    ucs_reconfigure(wrapper_ncurses, wrapper_pdcurses)
+        # Reconfigure the UniCurses wrapper to use a certain library instead of the default
+        # PDCurses and the default NCurses. This must be called before initscr().
+        # Pass an empty string or UCS_DEFAULT_WRAPPER to use the default wrapper.
+        # !!! THIS IS NOT FOR GENERAL USE AND WILL IN MOST CASES BREAK UNICURSES !!!
+        # !!! EVEN IF IT DOESN'T MAKE YOUR APP CRASH OR HANG, IT MAY BREAK PORTABILITY !!!
+        # !!! IF YOU DON'T KNOW WHAT THIS MAY BE USED FOR, YOU DON'T NEED TO USE IT !!!
+    
+    unctrl(ch)
+    
+    ungetch(ch)
+    
+    ungetmouse(id, x, y, z, bstate)
+    
+    untouchwin(scr_id)
+    
+    update_panels()
+    
+    use_default_colors()
+    
+    use_env(flag)
+    
+    vline(ch, n)
+    
+    waddch(scr_id, ch, attr=0)
+        # functions
+    
+    waddnstr(scr_id, cstr, n, attr='NO_USE')
+    
+    waddstr(scr_id, cstr, attr='NO_USE')
+    
+    wattroff(scr_id, attr)
+    
+    wattron(scr_id, attr)
+    
+    wattrset(scr_id, attr)
+    
+    wbkgd(scr_id, ch, attr=0)
+    
+    wbkgdset(scr_id, ch, attr=0)
+    
+    wborder(scr_id, ls=4194424, rs=4194424, ts=4194417, bs=4194417, tl=4194412, tr=4194411, bl=4194413, br=4194410)
+    
+    wchgat(scr_id, num, attr, color, opts=None)
+    
+    wclear(scr_id)
+    
+    wclrtobot(scr_id)
+    
+    wclrtoeol(scr_id)
+    
+    wdelch(scr_id)
+    
+    wdeleteln(scr_id)
+    
+    wechochar(scr_id, ch, attr=0)
+    
+    wenclose(scr_id, y, x)
+    
+    werase(scr_id)
+    
+    wgetch(scr_id)
+    
+    wgetkey(scr_id, y=-1, x=-1)
+    
+    wgetstr(scr_id)
+    
+    whline(scr_id, ch, n)
+    
+    winch(scr_id)
+    
+    winsch(scr_id, ch, attr=0)
+    
+    winsdelln(scr_id, nlines)
+    
+    winsertln(scr_id)
+    
+    winsnstr(scr_id, strn, n, attr='NO_USE')
+    
+    winsstr(scr_id, strn, attr='NO_USE')
+    
+    winstr(scr_id, n=-1)
+    
+    wmove(scr_id, new_y, new_x)
+    
+    wredrawln(scr_id, beg, num)
+    
+    wrefresh(scr_id)
+    
+    wscrl(scr_id, lines=1)
+    
+    wsetscrreg(scr_id, top, bottom)
+    
+    wstandend(scr_id)
+    
+    wstandout(scr_id)
+    
+    wsyncdown(scr_id)
+    
+    wsyncup(scr_id)
+    
+    wtimeout(scr_id, delay)
+    
+    wtouchline(scr_id, start, count, changed=1)
+    
+    wvline(scr_id, ch, n)
+
+DATA
+    ACS_BBSS = 4194411
+    ACS_BLOCK = 4194352
+    ACS_BOARD = 4194408
+    ACS_BSBS = 4194417
+    ACS_BSSB = 4194412
+    ACS_BSSS = 4194423
+    ACS_BTEE = 4194422
+    ACS_BULLET = 4194430
+    ACS_CKBOARD = 4194401
+    ACS_DARROW = 4194350
+    ACS_DEGREE = 4194406
+    ACS_DIAMOND = 4194400
+    ACS_GEQUAL = 4194426
+    ACS_HLINE = 4194417
+    ACS_LANTERN = 4194409
+    ACS_LARROW = 4194348
+    ACS_LEQUAL = 4194425
+    ACS_LLCORNER = 4194413
+    ACS_LRCORNER = 4194410
+    ACS_LTEE = 4194420
+    ACS_NEQUAL = 4194428
+    ACS_PI = 4194427
+    ACS_PLMINUS = 4194407
+    ACS_PLUS = 4194414
+    ACS_RARROW = 4194347
+    ACS_RTEE = 4194421
+    ACS_S1 = 4194415
+    ACS_S3 = 4194416
+    ACS_S7 = 4194418
+    ACS_S9 = 4194419
+    ACS_SBBS = 4194410
+    ACS_SBSB = 4194424
+    ACS_SBSS = 4194421
+    ACS_SSBB = 4194413
+    ACS_SSBS = 4194422
+    ACS_SSSB = 4194420
+    ACS_SSSS = 4194414
+    ACS_STERLING = 4194429
+    ACS_TTEE = 4194423
+    ACS_UARROW = 4194349
+    ACS_ULCORNER = 4194412
+    ACS_URCORNER = 4194411
+    ACS_VLINE = 4194424
+    ALL_MOUSE_EVENTS = 134217727
+    A_ALTCHARSET = 4194304
+    A_ATTRIBUTES = -256
+    A_BLINK = 524288
+    A_BOLD = 2097152
+    A_CHARTEXT = 255
+    A_COLOR = 65280
+    A_DIM = 1048576
+    A_INVIS = 8388608
+    A_NORMAL = 0
+    A_PROTECT = 16777216
+    A_REVERSE = 262144
+    A_STANDOUT = 65536
+    A_UNDERLINE = 131072
+    BUTTON1_CLICKED = 4
+    BUTTON1_DOUBLE_CLICKED = 8
+    BUTTON1_PRESSED = 2
+    BUTTON1_RELEASED = 1
+    BUTTON1_TRIPLE_CLICKED = 16
+    BUTTON2_CLICKED = 256
+    BUTTON2_DOUBLE_CLICKED = 512
+    BUTTON2_PRESSED = 128
+    BUTTON2_RELEASED = 64
+    BUTTON2_TRIPLE_CLICKED = 1024
+    BUTTON3_CLICKED = 16384
+    BUTTON3_DOUBLE_CLICKED = 32768
+    BUTTON3_PRESSED = 8192
+    BUTTON3_RELEASED = 4096
+    BUTTON3_TRIPLE_CLICKED = 65536
+    BUTTON4_CLICKED = 1048576
+    BUTTON4_DOUBLE_CLICKED = 2097152
+    BUTTON4_PRESSED = 524288
+    BUTTON4_RELEASED = 262144
+    BUTTON4_TRIPLE_CLICKED = 4194304
+    BUTTON_ALT = 67108864
+    BUTTON_CTRL = 16777216
+    BUTTON_SHIFT = 33554432
+    COLOR_BLACK = 0
+    COLOR_BLUE = 4
+    COLOR_CYAN = 6
+    COLOR_GREEN = 2
+    COLOR_MAGENTA = 5
+    COLOR_RED = 1
+    COLOR_WHITE = 7
+    COLOR_YELLOW = 3
+    ERR = -1
+    KEY_A1 = 348
+    KEY_A3 = 349
+    KEY_B2 = 350
+    KEY_BACKSPACE = 263
+    KEY_BEG = 354
+    KEY_BREAK = 257
+    KEY_BTAB = 353
+    KEY_C1 = 351
+    KEY_C3 = 352
+    KEY_CANCEL = 355
+    KEY_CATAB = 342
+    KEY_CLEAR = 333
+    KEY_CLOSE = 356
+    KEY_COMMAND = 357
+    KEY_COPY = 358
+    KEY_CREATE = 359
+    KEY_CTAB = 341
+    KEY_DC = 330
+    KEY_DL = 328
+    KEY_DOWN = 258
+    KEY_EIC = 332
+    KEY_END = 360
+    KEY_ENTER = 343
+    KEY_EOL = 335
+    KEY_EOS = 334
+    KEY_EXIT = 361
+    KEY_F0 = 264
+    KEY_FIND = 362
+    KEY_HELP = 363
+    KEY_HOME = 262
+    KEY_IC = 331
+    KEY_IL = 329
+    KEY_LEFT = 260
+    KEY_LL = 347
+    KEY_MARK = 364
+    KEY_MAX = 511
+    KEY_MESSAGE = 365
+    KEY_MIN = 257
+    KEY_MOUSE = 409
+    KEY_MOVE = 366
+    KEY_NEXT = 367
+    KEY_NPAGE = 338
+    KEY_OPEN = 368
+    KEY_OPTIONS = 369
+    KEY_PPAGE = 339
+    KEY_PREVIOUS = 370
+    KEY_PRINT = 346
+    KEY_REDO = 371
+    KEY_REFERENCE = 372
+    KEY_REFRESH = 373
+    KEY_REPLACE = 374
+    KEY_RESET = 345
+    KEY_RESIZE = 410
+    KEY_RESTART = 375
+    KEY_RESUME = 376
+    KEY_RIGHT = 261
+    KEY_SAVE = 377
+    KEY_SBEG = 378
+    KEY_SCANCEL = 379
+    KEY_SCOMMAND = 380
+    KEY_SCOPY = 381
+    KEY_SCREATE = 382
+    KEY_SDC = 383
+    KEY_SDL = 384
+    KEY_SELECT = 385
+    KEY_SEND = 386
+    KEY_SEOL = 387
+    KEY_SEXIT = 388
+    KEY_SF = 336
+    KEY_SFIND = 389
+    KEY_SHELP = 390
+    KEY_SHOME = 391
+    KEY_SIC = 392
+    KEY_SLEFT = 393
+    KEY_SMESSAGE = 394
+    KEY_SMOVE = 395
+    KEY_SNEXT = 396
+    KEY_SOPTIONS = 397
+    KEY_SPREVIOUS = 398
+    KEY_SPRINT = 399
+    KEY_SR = 337
+    KEY_SREDO = 400
+    KEY_SREPLACE = 401
+    KEY_SRESET = 344
+    KEY_SRIGHT = 402
+    KEY_SRSUME = 403
+    KEY_SSAVE = 404
+    KEY_SSUSPEND = 405
+    KEY_STAB = 340
+    KEY_SUNDO = 406
+    KEY_SUSPEND = 407
+    KEY_UNDO = 408
+    KEY_UP = 259
+    NCURSES = True
+    NCURSES_AVAILABLE = True
+    OK = 0
+    PDC_LEAVEOK = False
+    REPORT_MOUSE_POSITION = 134217728
+    SCS_BBSS = 4194411
+    SCS_BLOCK = 35
+    SCS_BOARD = 35
+    SCS_BSBS = 4194417
+    SCS_BSSB = 4194412
+    SCS_BSSS = 4194423
+    SCS_BTEE = 43
+    SCS_BULLET = 111
+    SCS_CKBOARD = 58
+    SCS_DARROW = 118
+    SCS_DEGREE = 92
+    SCS_DIAMOND = 43
+    SCS_GEQUAL = 62
+    SCS_HLINE = 45
+    SCS_LANTERN = 42
+    SCS_LARROW = 60
+    SCS_LEQUAL = 60
+    SCS_LLCORNER = 43
+    SCS_LRCORNER = 43
+    SCS_LTEE = 43
+    SCS_NEQUAL = 43
+    SCS_PI = 110
+    SCS_PLMINUS = 35
+    SCS_PLUS = 43
+    SCS_RARROW = 62
+    SCS_RTEE = 43
+    SCS_S1 = 45
+    SCS_S3 = 45
+    SCS_S7 = 45
+    SCS_S9 = 95
+    SCS_SBBS = 4194410
+    SCS_SBSB = 4194424
+    SCS_SBSS = 4194421
+    SCS_SSBB = 4194413
+    SCS_SSBS = 4194422
+    SCS_SSSB = 4194420
+    SCS_SSSS = 4194414
+    SCS_STERLING = 76
+    SCS_TTEE = 43
+    SCS_UARROW = 94
+    SCS_ULCORNER = 43
+    SCS_URCORNER = 43
+    SCS_VLINE = 124
+    UCS_DEFAULT_WRAPPER = ''
+    code = 'UTF-8'
+    pdlib = None
+    stdscr = -1
+
+FILE
+    /usr/lib/python3.5/unicurses.py
+
